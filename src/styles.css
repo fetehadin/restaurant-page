@@ -1,0 +1,16 @@
+/* styles.css */
+body {
+  background-color: rebeccapurple;
+}
+
+header{
+  background-color: green;
+}
+
+nav{
+  display: flex;
+}
+nav img{
+  width: 50px;
+  height: 50px;
+}
