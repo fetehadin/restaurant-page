@@ -15,11 +15,14 @@ import menu3 from "./menu-3.jpg";
 import service1 from "./service-1.png";
 import service2 from "./service-2.png";
 import service3 from "./service-3.png";
-import user from "./user-1.jpg"
+import user from "./user-1.jpg";
+import bag from "./bag.png";
+import search from "./search.png"
+
 
 
 export {
-    logo, logoDark , customer , customer1 , customer2 , customer3, banner, header, headerContent1, headerContent2, headerContent3 , menu1 , menu2 , menu3 , service1 , service2, service3, user
+    logo, logoDark , customer , customer1 , customer2 , customer3, banner, header, headerContent1, headerContent2, headerContent3 , menu1 , menu2 , menu3 , service1 , service2, service3, user,bag , search
 }
 
 
