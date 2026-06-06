@@ -22,25 +22,27 @@ export function createCardList(items){
     const ul = document.createElement("ul");
     items.forEach(item=>{
         const li = document.createElement("li");
-        const div = document.createElement("div");
-        div.classList.add(item);
 
-        li.appendChild(div);
+        li.classList.add(item)
         ul.appendChild(li);
     });
     return ul;
 }
 
 
-document.body.appendChild(navSection)
-document.body.appendChild(heroSection);
-document.body.appendChild(MenuSection);
-document.body.appendChild(serviceSection);
-document.body.appendChild(cartSection);
-document.body.appendChild(customerSection);
-document.body.appendChild(footerSection);
+const container = document.createElement("div");
+container.classList.add("container");
 
+container.append(
+    navSection,
+    heroSection,
+    MenuSection,
+    serviceSection,
+    cartSection,
+    customerSection,
+    footerSection
+);
 
-
+document.body.appendChild(container);
 
 

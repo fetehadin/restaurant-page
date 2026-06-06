@@ -53,9 +53,14 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }/* styles.css */
 body {
-  background-color: rebeccapurple;
-  color: black;
-  
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 a {
   text-decoration: none;
@@ -66,7 +71,7 @@ a:hover{
 }
 
 header{
-  width: 80%;
+  /* width: 80%; */
   margin-top: 30px;
   background-color: white;
 }
@@ -82,7 +87,7 @@ header{
 .navBar ul{
   width: 350px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
 }
@@ -102,11 +107,15 @@ li{
 
 
 /* hero section */
-.heroSection{
-    display: flex;
+.heroSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    margin-top: 65px;
+    /* align-items: center; */
 }
 .leftSection{
-  width: 50%;
+  /* width: 50%; */
   justify-content: left;
 }
 .healthy{
@@ -121,14 +130,20 @@ li{
   box-shadow: 0 0 20px;
   overflow: hidden;
   border-radius: 2rem;
-  margin-top: 60px;
+  margin-left: 0;
+}
+.rightSection{
+  /* width: 50%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .ImgContainer{
-  width: 80px;
   
+  width: 80px;
   background-color: #F95555;
-
 }
+
 .healthyImg{
   width: 30px;
   /* margin-right: 50px; */
@@ -137,7 +152,7 @@ li{
 
 }
 .healthypara{
-  padding-inline: 1rem 2rem;
+  padding-inline: 1rem 1rem;
   font-size: 1rem;
   font-weight: 600;
   color: #171717;
@@ -164,3 +179,123 @@ li{
   font-weight: 500;
   line-height: 1.75;
 }
+
+.rightImg {
+  position: relative;
+  background-color: #222; 
+  margin-top: 150px;
+  height: 560px;
+  border-radius: 40px;  
+  z-index: 1; 
+}
+
+
+.rightImg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 250px; /* Just needs to cover the top area */
+  background-color: #222; 
+  border-radius: 40px 40px 0 0; 
+  transform-origin: top left; /* Pins the top-left corner in place... */
+  transform: skewY(-10deg); /* ...and shoots the right side UP to make the slant! */
+  z-index: -1; /* Tucks it seamlessly behind the main box */
+}
+
+.rightImg img { 
+  position: relative;
+  margin-top: -155px;
+  width: 450px;
+  z-index: 2; 
+}
+
+.aboutService{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  /* gap: 20px; */
+  /* padding-left: 10px; */
+  align-items: center;
+}
+.heroCustomerImg{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: solid white 8px;
+  box-shadow: 0 0 20px rgb(0, 0, 0.2);
+}
+
+.deliverPara{
+    position: relative;
+    padding-left: 23px;
+}
+.deliverPara::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 50px;
+    background-color: #F95555;
+}
+
+.button{
+  width: 160px;
+  height: 60px;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+  margin: 10px;
+  background-color: white;
+  color: #F95555;
+}
+.coloredBtn{
+  background-color: #F95555;
+  color: white;
+}
+
+.featureItems{
+  margin: 0;
+  padding: 0;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 17px;
+  color: #F95555;
+}
+
+.featureItems img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+
+  position: absolute;
+  top: -25px;
+}
+
+.featureItems li {
+  width: 190px;
+  height: 130px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+
+  padding-top: 35px; /* space for image */
+}
+
+
+.featureItems p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #F95555;
+}
+
